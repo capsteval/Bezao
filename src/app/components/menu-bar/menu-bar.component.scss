@@ -1,0 +1,90 @@
+aside {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 100;
+    width: 100%;
+    overflow: hidden;
+    transform: translateX(-1000px);
+    opacity: 0;
+    transition: all 0.5s;
+
+    &.open{
+        transform:translateX(0) ;
+        opacity: 1;
+    }
+    .menu-bar {
+        padding: 24px;
+
+        .header {
+            display: flex;
+            justify-content: end;
+
+            img {
+                cursor: pointer;
+            }
+        }
+
+        .buttons {
+            margin-top: 80px;
+            margin-bottom: 40px;
+
+            .btn {
+                background-color: transparent;
+                outline: none;
+                border: none;
+                border-radius: 30px;
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 160%;
+                padding: 20px 30px;
+                margin-right: 10px;
+
+            }
+
+            .btn.create {
+                background-color: #DA3743;
+                color: #ffffff;
+            }
+
+            .btn.sign-in {
+                border: 2px solid #DA3743;
+                color: #121212;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            display: grid;
+            row-gap: 34px;
+
+            li {
+                list-style: none;
+
+                a {
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 160%;
+                    color: #666666;
+                    text-decoration: none;
+                    display:flex;
+                    column-gap: 27px;
+                    transition: all 0.3s;
+                    &:hover{
+                        color:#CCCCCC;
+                    }
+                    &:hover svg path{
+                        fill:#CCCCCC;
+                    }
+                }
+            }
+        }
+    }
+}

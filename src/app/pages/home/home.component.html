@@ -1,0 +1,83 @@
+<main>
+    <app-hero-screen></app-hero-screen>
+   
+    <section>
+        <div class="menu-section">
+
+            <h3>MENU</h3>
+            <div class="menu-text-tab">
+
+                <h1>Current menu</h1>
+                <div class="menu-tab">
+                    <ul class="menu-tab-wrapper">
+                        <li><span class="active">All</span></li>
+                        <li><span>Rice</span></li>
+                        <li><span>Beans</span></li>
+                        <li><span>Fries</span></li>
+                        <li><span>Swallow</span></li>
+                        <li><span>Others</span></li>
+    
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-item-container">
+                <ng-container *ngFor="let menu of menuItems">
+
+                    <app-menu-item [menu]="menu"></app-menu-item>
+                </ng-container>
+            </div>
+
+            <aside>
+                <button class="all-menu">Full Menu</button>
+            </aside>
+        </div>
+    </section>
+    <section >
+        <div class="testimony-section">
+            <div class="text">
+
+                <h2>What our customers say about us</h2>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+            </div>
+            <div class="card">
+                <div class="card-head">
+                    <div class="profile">
+                        <img src="../../../assets/icons/avatar.svg" alt="">
+                    </div>
+                    <div class="details">
+                        <label for="" class="main-title">John Samson</label>
+                        <label for="" class="sub-title">Enugu, Nigeria</label>
+                    </div>
+                    
+                    <div class="quote">
+                        <img src="../../../assets/icons/qoute.svg" alt="">
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>White dwarf a still more glorious dawn awaits tingling of the spine emerged into consciousness Vangelis shores of the cosmic ocean. Tendrils of gossamer clouds kindling the energy hidden in matter concept of the number one permanence.</p>
+                </div>
+            </div>
+            <div class="card-tracker">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="blog-section">
+            <h1>Blog Our Latest News</h1>
+            <p>Have you ever browsed food blogs like mine and wondered how to start a food blog of your very own? </p>
+            <div class="blog-post-container">
+                <ng-container *ngFor="let post of blogPost">
+
+                    <app-blog-post [post]="post"></app-blog-post>
+                </ng-container>
+                <!-- <app-blog-post></app-blog-post>
+                <app-blog-post></app-blog-post> -->
+            </div>
+        </div>
+    </section>
+</main>

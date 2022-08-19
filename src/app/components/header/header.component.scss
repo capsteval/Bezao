@@ -1,0 +1,162 @@
+@use '../../../themes/config.scss' as config;
+
+header {
+    background-color: #fff;
+}
+
+.header-wrapper {
+    display: flex;
+    padding: 15px 0px;
+
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    z-index: 10;
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+
+    a {
+        text-decoration: none;
+
+    }
+
+    .logo {
+        display: flex;
+        column-gap: 5px;
+
+
+        h2 {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 14.9472px;
+            line-height: 160%;
+            letter-spacing: 0.004em;
+            color: #1A1A1A;
+        }
+    }
+
+    .cart-menu {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        .cart {
+            cursor: pointer;
+        }
+
+        .menu {
+            cursor: pointer;
+        }
+    }
+
+    nav {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .button-wrap {
+        display: none;
+    }
+    .sign-text{
+        display: none;
+    }
+}
+
+@include config.media-lg {
+    header {
+
+        box-shadow: 0px 8px 16px -6px rgba(24, 39, 75, 0.08);
+        position: relative;
+
+        z-index: 2;
+        // border: 1px solid red;
+
+    }
+
+    .header-wrapper {
+
+        nav {
+            display: block;
+
+            ul {
+                display: flex;
+
+                li {
+                    padding: 5px 20px;
+                    list-style: none;
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 160%;
+                    letter-spacing: 0.004em;
+                    color: #666666;
+                    cursor: pointer;
+
+                    & a.active {
+                        color: #DA3743;
+                        position: relative;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: -5px;
+                            left: 0;
+                            border-top: 2px solid #DA3743;
+                            width: 11px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .search {
+            display: block;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        p {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0.004em;
+            color: #666666;
+        }
+
+        .button-wrap {
+            display: block;
+
+            button {
+                background-color: #DA3743;
+                border: none;
+                outline: none;
+                border-radius: 30px;
+                padding: 14px 24px;
+                color: #fff;
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 160%;
+                cursor: pointer;
+            }
+
+
+        }
+        .sign-text{
+            display: block;
+        }
+    }
+
+}
